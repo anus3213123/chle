@@ -1,0 +1,38 @@
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QVBoxLayout, QLabel, QMessageBox, QRadioButton, QHBoxLayout
+import random
+###################
+
+app = QApplication([])
+main_win = QWidget()
+main_win.setWindowTitle('Memory Card')
+question = QLabel("Яблоко")
+btn_answer1= QRadioButton("Building")
+btn_answer2= QRadioButton("Application")
+btn_answer3= QRadioButton("Apple")
+btn_answer4= QRadioButton("Pillow")
+layout_main= QVBoxLayout()
+layout_main.addWidget(question,alignment= Qt.AlignCenter)
+layout_main.addWidget(btn_answer1,alignment= Qt.AlignCenter)
+layout_main.addWidget(btn_answer2,alignment= Qt.AlignCenter)
+layout_main.addWidget(btn_answer3,alignment= Qt.AlignCenter)
+layout_main.addWidget(btn_answer4,alignment= Qt.AlignCenter)
+main_win.setLayout(layout_main)
+main_win.show()
+app.exec_()
+
+layoutH1 = QHBoxLayout()
+
+layoutH2 = QHBoxLayout()
+
+layoutH3 = QHBoxLayout()
+layout_main.addWidget(question, alignment=Qt.AlignCenter)
+layout_main.addWidget(btn_answer1, alignment=Qt.AlignCenter)
+layout_main.addWidget(btn_answer2, alignment=Qt.AlignCenter)
+layout_main.addWidget(btn_answer3, alignment=Qt.AlignCenter)
+layout_main.addWidget(btn_answer4, alignment=Qt.AlignCenter)
+layout_main = QVBoxLayout()
+layout_main.addLayout(layoutH1)
+layout_main.addLayout(layoutH2)
+layout_main.addLayout(layoutH3)
+main_win.setLayout(layout_main)
