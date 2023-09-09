@@ -113,6 +113,7 @@ class Option3Window(QWidget):
         label = QLabel("шедевростендофф")
         st1 = QRadioButton("Стендоффчик")
         st2 = QRadioButton("Голда не на балике")
+        st3 = QRadioButton("Я АПНУЛ")
         back_button = QPushButton("Назад")
         back_button.clicked.connect(self.close)
 
@@ -120,6 +121,7 @@ class Option3Window(QWidget):
         layout.addWidget(label)
         layout.addWidget(st1)
         layout.addWidget(st2)
+        layout.addWidget(st3)
         layout.addWidget(back_button)
 
         def a1():
@@ -129,13 +131,16 @@ class Option3Window(QWidget):
 
         def a2():
             mus = pyglet.media.load("gold.mp3")
-            mus.play()         
-            
-        
-            
+            mus.play()      
 
+        def a3():
+            mus = pyglet.media.load("up.mp3")
+            mus.play()  
+            
         st1.clicked.connect(a1)
         st2.clicked.connect(a2)
+        st3.clicked.connect(a3)
+
 
         self.setLayout(layout)
         self.setWindowTitle("Стендоффчик")
