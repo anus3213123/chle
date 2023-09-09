@@ -24,7 +24,7 @@ class Option1Window(QWidget):
         layout.addWidget(back_button)
 
         self.setLayout(layout)
-        self.setWindowTitle("Окно для Папич")
+        self.setWindowTitle("папаня")
         def top1():
             mus = pyglet.media.load("ja-samyj-adekvatnyj-v-mire.mp3")
             mus.play()
@@ -59,7 +59,7 @@ class Option2Window(QWidget):
     def __init__(self):
         super().__init__()
 
-        label = QLabel("Это окно для Дота")
+        label = QLabel("дота")
         d1 = QRadioButton("12 танго")
         d2 = QRadioButton("встань мид")
         d3 = QRadioButton("БАУНТИ ХАНТЕР")
@@ -110,7 +110,7 @@ class Option3Window(QWidget):
     def __init__(self):
         super().__init__()
 
-        label = QLabel("Это окно для Стендоффчик")
+        label = QLabel("шедевростендофф")
         st1 = QRadioButton("Стендоффчик")
         st2 = QRadioButton("Голда не на балике")
         back_button = QPushButton("Назад")
@@ -144,7 +144,7 @@ class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        label = QLabel("soundpad")
+        label = QLabel("выбери шото")
 
         self.game_modes = QComboBox()
         self.game_modes.addItem("Папич")
@@ -160,7 +160,7 @@ class MyWindow(QWidget):
         layout.addWidget(start_button)
 
         self.setLayout(layout)
-        self.setWindowTitle("Настройки игры")
+        self.setWindowTitle("soundpad")
         self.setGeometry(100, 100, 400, 150)
 
     def show_selected_option_window(self):
@@ -174,12 +174,6 @@ class MyWindow(QWidget):
         elif selected_option == "Стендоффчик":
             self.option3_window = Option3Window()
             self.option3_window.show()
-count = 0
-
-
-
-
-
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
